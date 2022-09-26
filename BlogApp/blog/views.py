@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 def indexPage(request):
-    s = "Hello there lads "
+    s = "Hello there lads, welcome to my blog ! "
     context = {
         "hello" : s
     }    

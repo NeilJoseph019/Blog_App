@@ -1,9 +1,11 @@
+{% extends "appLayout.html" %}
 {% load static %}
-    {% block pageTitle %} {% endblock %}
+    {% block title %} Home {% endblock %}
     
     {% block cssFiles %} 
-        <link rel="stylesheet" href="{% static 'blog/index.css' %}">
+        <!-- <link rel="stylesheet" href="{% static 'blog/index.css' %}"> -->
     {% endblock %}
 
     {% block content %}
+        {{hello}}
     {% endblock %}    

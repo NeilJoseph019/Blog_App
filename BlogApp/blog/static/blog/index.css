@@ -5,14 +5,61 @@
 
 section{
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     scroll-snap-align: start;
 }
+
 
 .container{
     height: 100vh;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
+}
+
+.welcome-area{
+    background-color: rgb(9, 15, 33); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome{
+    padding: 8rem 15rem 0;
+    height: 40rem;
+    width: 40rem;
+}
+
+.welcome img{
+    border-radius: 7px;
+    border: 5px solid white;
+    max-height: 300px;
+    max-width: 300px;
+    transform: rotateZ(-5deg);
+}
+
+.small-welcome-intro h2,h5 {
+    padding-right: 20rem;
+    color: azure;
+}
+
+.blog-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(227, 227, 166);
+    
+}
+
+.blog-area ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.about-area{
+    background-color: rgb(211, 140, 119);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

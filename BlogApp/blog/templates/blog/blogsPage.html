@@ -1,0 +1,17 @@
+{% extends 'appLayout.html' %}
+{% load static %}
+
+    {% block title %} Blogs {% endblock %}
+    {% block cssFiles %} 
+        <link rel="stylesheet" href="{% static 'blog/blogsPage.css' %}">
+    {% endblock %}
+
+    {% block content %}
+        <section class="blogs">
+            <h2> All Blogs: </h2>
+            <a href="{% url 'indexPage' %}"><button> Back </button></a>
+            <ul>
+                {% include 'blog/includes/blogDetail.html' %}  
+            </ul> 
+        </section>
+    {% endblock %}    

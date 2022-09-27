@@ -7,31 +7,38 @@
     {% endblock %}
 
     {% block content %}
+
         {% include 'blog/includes/header.html' %}  <!-- NEED TO KEEP THIS HEADER IN A FIXED POSITION. -->
         <div class="container">
+
             <section class="welcome-area">
                 <!-- Welcome-Area -->
-                <h1>page 0</h1>
+                <div class="welcome">
+                    <img src="{% static 'blog/images/NJ_profilepic.jpg' %}" alt="Neil's profile picture">
+                </div>
+                <div class="small-welcome-intro">
+                    <h2>Neil</h2>
+                    <h2>Joseph</h2>
+                    <h5>Hi, I am software developer. I enjoy building applications for implementing some of my creative ideas ! </h5>
+                    <h5> I also love to blog about the tech world as I learn new technologies myself !</h5>
+                </div>
             </section>
-            <section class="about-me-area">
-                <!-- About-me-Area -->
-                <h1>page 1</h1>
+        
+            <section class="blog-area">
+                <!-- Blogs-Area -->
+                <h1>My Blogs:</h1>  
+                <a href="{% url 'blogsPage' %}"><button> View All </button></a>
+                <br>
+                <ul>
+                    {% include 'blog/includes/blogDetail.html' %}  
+                </ul>               
             </section>
-            <section class="skills-area"> 
-                <!-- Skills-Area -->
-                <h1>page 2</h1>
-            </section>
-            <section class="work-experience-area">
-                <!-- Work-Experience-Area -->
-                <h1>page 3</h1>
-            </section>
-            <section class="education-area">
-                <!-- Education-Area -->
-                <h1>page 4</h1>
-            </section>
-            <section class="email-area">
-                <!-- Email-Area -->
-                <h1>page 5</h1>
+
+            <section class="about-area">
+                <!-- About-Area -->
+                <h2> What do i do</h2>
+                <p>I love programming, I love helping people and i love exploring new technologies.</p>
+                <p>My goal is to keep growing as a developer and some day have my own company as an entrepreneur. </p>
             </section>
         </div>
 

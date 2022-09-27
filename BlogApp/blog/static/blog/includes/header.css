@@ -1,0 +1,12 @@
+header{
+    height: 6rem;
+    background-color: rgb(66, 9, 119);
+    display: flex;
+    justify-content:left;
+    padding-left: 2rem;
+    align-items:center;
+}
+h1 a{
+    color: aliceblue;
+    text-decoration: none;
+}

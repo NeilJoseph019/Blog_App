@@ -8,8 +8,8 @@ def indexPage(request):
     }    
     return render(request,"blog/index.html", context)
 
-def postsPage(request):
-    pass
+def blogsPage(request):
+    return render(request,"blog/blogsPage.html")
 
-def postDetailPage(request):
+def blogDetailPage(request):
     pass

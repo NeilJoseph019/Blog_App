@@ -1,0 +1,26 @@
+{% extends 'appLayout.html' %}
+{% load static %}
+
+    {% block title %} {{ post.title }} {% endblock %}
+    {% block cssFiles %} 
+        <link rel="stylesheet" href="{% static 'blog/singleBlogDetail.css' %}">
+    {% endblock %}
+
+    {% block content %}
+        <section class="summary">
+            {% include 'blog/includes/header.html' %}
+            <h1> {{ post.title }} </h1>
+            <article>
+                <img src="{% static '/blog/images/'|add:post.image %}" alt="{{ post.title }}">
+                <address>By {{ post.author }}</address>
+                <div>Last Updated on: {{ post.timeStamp|title }} 
+                </div>
+            </article>
+        </section>
+        <br>
+        <main>
+            <p>
+                {{ post.content|linebreaks }}
+            </p>
+        </main>
+    {% endblock %} 

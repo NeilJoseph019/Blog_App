@@ -8,10 +8,12 @@
 
     {% block content %}
         <section class="blogs">
+            {% include 'blog/includes/header.html' %}
             <h2> All Blogs: </h2>
-            <a href="{% url 'indexPage' %}"><button> Back </button></a>
             <ul>
-                {% include 'blog/includes/blogDetail.html' %}  
+                {% for post in allPosts %}
+                    {% include 'blog/includes/blogDetail.html' %}  
+                {% endfor %}
             </ul> 
         </section>
     {% endblock %}    

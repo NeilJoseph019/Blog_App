@@ -30,7 +30,9 @@
                 <a href="{% url 'blogsPage' %}"><button> View All </button></a>
                 <br>
                 <ul>
-                    {% include 'blog/includes/blogDetail.html' %}  
+                    {% for post in posts %}
+                        {% include 'blog/includes/blogDetail.html' %}  
+                    {% endfor %}
                 </ul>               
             </section>
 

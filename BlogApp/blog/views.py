@@ -79,6 +79,7 @@ def blogDetailPage(request, slug):
     # # identifiedPost = Post.objects.get(slug=slug)
     # identifiedPost = next(post for post in posts if post["slug"] == slug) # next() finds the next element that matches a certain condition. The condition that is met is list comprehension.
     context = {
-        "post": identifiedPost
+        "post": identifiedPost,
+        "tags": identifiedPost.tag.all()
     }
     return render(request, "blog/singleBlogDetail.html", context)

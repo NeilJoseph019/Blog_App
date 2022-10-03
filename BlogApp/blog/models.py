@@ -1,3 +1,4 @@
+from contextlib import nullcontext
 from django.db import models
 from django.core.validators import MinLengthValidator
 
@@ -19,7 +20,7 @@ class Post(models.Model):
     title = models.CharField(max_length=100)
     brief_description = models.CharField(max_length=240)
     content = models.TextField(validators=[MinLengthValidator(10)])
-    image = models.CharField(max_length=100)
+    image = models.ImageField(upload_to="posts", null=True)
     timestamp = models.DateTimeField(auto_now=True)
     slug = models.SlugField(unique=True, db_index=True)
 
